@@ -1,38 +1,68 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
 .App {
-  text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  padding: 1em 1.5em 1em 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nowrap {
+  white-space: nowrap;
+}
+.ellipsis {
+  max-width: 16em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis:hover {
+  white-space: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-cell {
+  max-width: 40%;
+  min-width: 150px;
+  flex: 1;
+  margin: 0.5em 0 1em 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.padded {
+  padding: 0.5em;
+}
+
+.pad-br {
+  padding: 0 1em 1em 0;
+}
+
+.margin-r {
+  margin-right: 1em;
+}
+
+.dash-toggle {
+  margin: 0;
+  padding: 0.5em;
+  width: inherit;
+  background-color: #ccc;
+  border: solid black 1px;
+  cursor: pointer;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.scroll-300 {
+  padding: 1em;
+  max-height: 300px;
+  overflow-y: auto;
 }
