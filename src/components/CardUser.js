@@ -26,7 +26,7 @@ const CardUser = props => {
         </div>
         <div className="flex-cell">
           <strong style={{ marginRight: "1em" }}>Role(s)</strong>
-          {user.Roles.map(u => u.Name).join(", ")}
+          {user.Roles.join(", ")}
         </div>
       </div>
       <Button icon="edit" text="Edit" intent="primary" onClick={goToDetails} />

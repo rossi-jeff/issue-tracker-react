@@ -66,3 +66,8 @@
   max-height: 300px;
   overflow-y: auto;
 }
+
+.inline-cb {
+  display: inline-block;
+  margin-right: 2em;
+}

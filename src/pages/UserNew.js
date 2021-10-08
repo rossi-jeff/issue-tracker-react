@@ -35,8 +35,7 @@ const UserNew = props => {
   ];
 
   const fieldChanged = event => {
-    const { name, value } = event.target;
-    // const newUser = JSON.parse(JSON.stringify(user));
+    let { name, value } = event.target;
     if (name.indexOf(".") > -1) {
       const newUser = {};
       for (let key in user) {
@@ -52,6 +51,16 @@ const UserNew = props => {
       newUser[parent][child] = value;
       setUser(newUser);
     } else {
+      if (name === "Roles") {
+        let key = value;
+        value = user.Roles;
+        if (value.includes(key)) {
+          let idx = value.indexOf(key);
+          if (idx !== -1) value.splice(idx, 1);
+        } else {
+          value.push(key);
+        }
+      }
       setUser({
         ...user,
         [name]: value

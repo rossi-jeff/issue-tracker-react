@@ -1,5 +1,6 @@
 import React from "react";
-import { FormGroup, InputGroup } from "@blueprintjs/core";
+import { FormGroup, InputGroup, Checkbox } from "@blueprintjs/core";
+import { RoleArray } from "../lib/options";
 
 const FormUser = props => {
   const { user } = props;
@@ -68,6 +69,21 @@ const FormUser = props => {
             />
           </FormGroup>
         </div>
+      </div>
+      <div>
+        <FormGroup label="Roles" labelFor="Roles" helperText="Check user roles">
+          {RoleArray.map(role => (
+            <Checkbox
+              name="Roles"
+              key={role}
+              label={role}
+              value={role}
+              checked={user.Roles.includes(role)}
+              onChange={props.fieldChanged}
+              className="inline-cb"
+            />
+          ))}
+        </FormGroup>
       </div>
     </form>
   );
