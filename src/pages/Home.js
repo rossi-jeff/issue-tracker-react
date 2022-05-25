@@ -13,7 +13,7 @@ const Home = props => {
 
     const loadResources = async () => {
       const results = await api.getData("resource", {}, buildHeaders());
-      setSelected(results[0].Id);
+      if (results.length) setSelected(results[0].Id);
       setResources(results);
       setFetched(true);
     };

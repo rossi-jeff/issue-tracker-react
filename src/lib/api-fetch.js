@@ -10,7 +10,7 @@ export const buildHeaders = (session = {}) => {
 };
 
 export class ApiFetch {
-  baseUrl = "https://issue-tracker-api-jrossi.herokuapp.com/";
+  baseUrl = "https://issue-tracker-api.jeff-rossi.com/";
   // baseUrl = "http://localhost:4000/";
 
   buildQueryString(obj) {
